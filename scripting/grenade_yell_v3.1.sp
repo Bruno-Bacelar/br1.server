@@ -21,7 +21,7 @@ public Plugin myinfo = {
 
     float g_plyrGrenScreamCoolDown[MAXPLAYERS+1];
     float g_plyrFireScreamCoolDown[MAXPLAYERS+1];
-	  float g_plyrGasScreamCoolDown[MAXPLAYERS+1];
+    float g_plyrGasScreamCoolDown[MAXPLAYERS+1];
 
 
 public OnMapStart()
@@ -50,13 +50,13 @@ public OnMapStart()
     PrecacheSound("player/voice/responses/security/leader/damage/molotov_incendiary_detonated5.ogg");
     PrecacheSound("player/voice/responses/security/leader/damage/molotov_incendiary_detonated4.ogg");
 
-	  //Gas/Toxic_Gas Call Out
-  	PrecacheSound("player/focus_gasp_01.wav");
-	  PrecacheSound("player/focus_gasp_02.wav");
-	  PrecacheSound("player/focus_gasp_03.wav");
-	  PrecacheSound("player/focus_gasp_04.wav");
-	  PrecacheSound("player/focus_gasp_05.wav");
-	  PrecacheSound("player/focus_gasp.wav");
+    //Gas/Toxic_Gas Call Out
+    PrecacheSound("player/focus_gasp_01.wav");
+    PrecacheSound("player/focus_gasp_02.wav");
+    PrecacheSound("player/focus_gasp_03.wav");
+    PrecacheSound("player/focus_gasp_04.wav");
+    PrecacheSound("player/focus_gasp_05.wav");
+    PrecacheSound("player/focus_gasp.wav");
 
 }
 
@@ -64,7 +64,7 @@ public void OnClientDisconnect(int client)
 {
     g_plyrFireScreamCoolDown[client] = 0.0;
     g_plyrGrenScreamCoolDown[client] = 0.0;
-	  g_plyrGasScreamCoolDown[client] = 0.0;
+    g_plyrGasScreamCoolDown[client] = 0.0;
 }
 
 public OnEntityCreated(entity, const String:classname[])
@@ -80,7 +80,7 @@ public OnEntityCreated(entity, const String:classname[])
         }
     else if (StrEqual(classname, "grenade_riotgas"))
         {
-        CreateTimer(0.2, GasScreamCheckTimer, entity, TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
+        CreateTimer(0.5, GasScreamCheckTimer, entity, TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
         }
 
 }
