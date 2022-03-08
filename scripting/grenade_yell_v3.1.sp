@@ -117,11 +117,11 @@ public Action:FireScreamCheckTimer(Handle:timer, any:entity)
             GetClientAbsOrigin(client,fPlayerOrigin);
 
             
-            if (g_plyrFireScreamCoolDown[client] != 0.0 && GetGameTime() - g_plyrFireScreamCoolDown[client] < 6.0) // 5 seconds cooldown
+            if (g_plyrFireScreamCoolDown[client] != 0.0 && GetGameTime() - g_plyrFireScreamCoolDown[client] < 17.0) // 15 seconds cooldown
                 continue;
 
 
-            if (GetVectorDistance(fPlayerOrigin, fGrenOrigin) <= 310)
+            if (GetVectorDistance(fPlayerOrigin, fGrenOrigin) <= 300)
             {
                 //PrintToServer("SCREAM FIRE");
                 PlayerFireScreamRand(client);
