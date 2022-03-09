@@ -121,7 +121,7 @@ public Action:FireScreamCheckTimer(Handle:timer, any:entity)
                 continue;
 
 
-            if (GetVectorDistance(fPlayerOrigin, fGrenOrigin) <= 300)
+            if (GetVectorDistance(fPlayerOrigin, fGrenOrigin) <= 290)
             {
                 //PrintToServer("SCREAM FIRE");
                 PlayerFireScreamRand(client);
