@@ -168,7 +168,7 @@ public Action:GrenadeScreamCheckTimer(Handle:timer, any:entity)
             if (g_plyrGrenScreamCoolDown[client] != 0.0 && GetGameTime() - g_plyrGrenScreamCoolDown[client] < 5.0) // 5 seconds cooldown
                 continue;
 
-            if (GetVectorDistance(fPlayerOrigin, fGrenOrigin) <= 360)
+            if (GetVectorDistance(fPlayerOrigin, fGrenOrigin) <= 340)
             {
                 PlayerGrenadeScreamRand(client);
                 g_plyrGrenScreamCoolDown[client] = GetGameTime();
