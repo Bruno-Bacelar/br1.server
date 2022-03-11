@@ -82,7 +82,7 @@ public OnEntityCreated(entity, const String:classname[])
         }
     else if (StrEqual(classname, "grenade_riotgas"))
         {
-        CreateTimer(0.5, GasScreamCheckTimer, entity, TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
+        CreateTimer(1.5, GasScreamCheckTimer, entity, TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
         }
 
 }
