@@ -42,6 +42,8 @@ public OnMapStart()
     PrecacheSound("player/voice/botsurvival/leader/incominggrenade11.ogg");
     PrecacheSound("player/voice/botsurvival/leader/incominggrenade10.ogg");
     PrecacheSound("player/voice/botsurvival/leader/incominggrenade18.ogg");
+    PrecacheSound("player/voice/botsurvival/leader/incominggrenade3.ogg");
+    PrecacheSound("player/voice/botsurvival/leader/incominggrenade8.ogg");
 
     //Molotov/Incen Callout
     PrecacheSound("player/voice/responses/security/subordinate/damage/molotov_incendiary_detonated7.ogg");
