@@ -5,7 +5,7 @@ public Plugin myinfo = {
     name        = "[INS] Yells Grenade",
     author        = "",
     description    = "Yells at nearby Grenades,Molotov and Gas",
-    version        = "3.1",
+    version        = "2.1",
     url            = "https://github.com/Bruno-Bacelar/br1.server/tree/main/scripting"
 };
 
