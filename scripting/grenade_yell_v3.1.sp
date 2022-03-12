@@ -329,7 +329,7 @@ public Action:BurnScreamCheckTimer(Handle:timer, any:entity)
     new Float:fGrenOrigin[3];
     new Float:fPlayerOrigin[3];
     new Float:fPlayerEyeOrigin[3];
-    new owner;
+
     if (IsValidEntity(entity) && entity > 0)
     {
         GetEntPropVector(entity, Prop_Send, "m_vecOrigin", fGrenOrigin);
