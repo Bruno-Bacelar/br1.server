@@ -102,7 +102,7 @@ public Action:Event_PlayerHurt(Handle:event, const String:name[], bool:dontBroad
 	//If you have more custom fire weapon then add it in here to have those weapon trigger the burn on players
 	if((StrEqual(sWeapon, "grenade_molotov")) || (StrEqual(sWeapon, "grenade_anm14")))
 	{
-		IgniteEntity(client, 10.0);
+		IgniteEntity(client, 15.0);
 	}
 	
 	return Plugin_Continue; 
@@ -122,7 +122,7 @@ public Action:OnTakeDamage(client, &attacker, &inflictor, &Float:damage, &damage
 	if(StrEqual(sWeapon, "entityflame"))
 	{
 		//Per fire damage (This damage stack up if player have more than 1 fire on them)
-		damage = 0.35;
+		damage = 0.45;
 		return Plugin_Changed;
 	}
 	
