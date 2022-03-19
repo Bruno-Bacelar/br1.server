@@ -11,3 +11,22 @@ stock BotFireScreamRand(client)
                 case 5: EmitSoundToAll("player/voice/responses/insurgent/leader/damage/molotov_incendiary_detonated5.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
         }
 }
+stock PlayerBurnScreamRand(client)
+{
+        //PrintToServer("SCREAM BURN");
+
+        switch(GetRandomInt(1, 11))
+        {
+                case 1: EmitSoundToAll("player/voice/botsurvival/subordinate/flashbanged15.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 2: EmitSoundToAll("player/voice/botsurvival/subordinate/flashbanged4.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 3: EmitSoundToAll("player/voice/botsurvival/subordinate/flashbanged8.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 4: EmitSoundToAll("player/voice/botsurvival/subordinate/incominggrenade21.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 5: EmitSoundToAll("player/voice/botsurvival/leader/flashbanged10.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 6: EmitSoundToAll("player/voice/botsurvival/leader/flashbanged11.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 7: EmitSoundToAll("player/voice/botsurvival/subordinate/flashbanged12.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 8: EmitSoundToAll("player/voice/botsurvival/subordinate/flashbanged21.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 9: EmitSoundToAll("player/voice/botsurvival/leader/incomminggrenade17.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 10: EmitSoundToAll("player/voice/botsurvival/leader/incomminggrenade26.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+                case 11: EmitSoundToAll("player/voice/botsurvival/leader/incomminggrenade32.ogg", client, SNDCHAN_VOICE, _, _, 1.0);
+        }
+}
