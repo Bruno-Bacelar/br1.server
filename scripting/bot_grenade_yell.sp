@@ -77,7 +77,7 @@ public OnEntityCreated(entity, const String:classname[])
         }
     else if (StrEqual(classname, "grenade_molotov") || StrEqual(classname, "grenade_anm14"))
         {
-        CreateTimer(0.5, FireScreamCheckTimer, entity, TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
+        CreateTimer(10.5, FireScreamCheckTimer, entity, TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
         }
 }
 
@@ -103,7 +103,7 @@ public Action:GrenadeScreamCheckTimer(Handle:timer, any:entity)
         if (!IsFakeClient(client))
             continue;
 
-        if (IsPlayerAlive(client) && GetClientTeam(client) == 3 && IsClientInGame(owner) && GetClientTeam(owner) == 2) // 1 <= owner <= MaxClients &&
+        if (IsPlayerAlive(client) && GetClientTeam(client) == 3 && 1 <= owner <= MaxClients && IsClientInGame(owner) && GetClientTeam(owner) == 2)
         {
 
             GetClientEyePosition(client, fPlayerEyeOrigin);
@@ -148,7 +148,7 @@ public Action:FireScreamCheckTimer(Handle:timer, any:entity)
         if (!IsFakeClient(client))
             continue;
 
-        if (IsPlayerAlive(client) && GetClientTeam(client) == 3 && IsClientInGame(owner) && GetClientTeam(owner) == 2) // 1 <= owner <= MaxClients &&
+        if (IsPlayerAlive(client) && GetClientTeam(client) == 3 && 1 <= owner <= MaxClients && IsClientInGame(owner) && GetClientTeam(owner) == 2) 
         {
 
             GetClientEyePosition(client, fPlayerEyeOrigin);
