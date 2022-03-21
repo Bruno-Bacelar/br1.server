@@ -7,13 +7,13 @@
 public Plugin:myinfo =
 {
         name = "Bot Brag",
-        author = "BCL4RS",  
-        description = "Bot brags after killing players.",    
+        author = "BCL4RS",
+        description = "Bot brags after killing players.",
         version = PLUGIN_VERSION,
         url = ""
 } 
 
-new Handle:bot_brag_enabled = INVALID_HANDLE                                                                                                                 
+new Handle:bot_brag_enabled = INVALID_HANDLE
 
 public OnPluginStart()      
 {
@@ -22,8 +22,8 @@ public OnPluginStart()
 
 public OnMapStart()
 {
-		    HookEventEx("player_death", OnPlayerDeath, EventHookMode_Post)
-		    PrecacheSound("player/voice/responses/insurgent/leader/suppressed/target1.ogg");
+	HookEventEx("player_death", OnPlayerDeath, EventHookMode_Post)
+	PrecacheSound("player/voice/responses/insurgent/leader/suppressed/target1.ogg");
         PrecacheSound("player/voice/responses/insurgent/leader/suppressed/target10.ogg");
         PrecacheSound("player/voice/responses/insurgent/leader/suppressed/target9.ogg");
         PrecacheSound("player/voice/responses/insurgent/leader/suppressed/target8.ogg");
@@ -52,13 +52,13 @@ public OnMapEnd()
 
 public Action:OnPlayerDeath(Handle:event, const String:name[], bool:dontBroadcast)
 {
-		if(GetConVarInt(bot_brag_enabled) == 1)                                                                                                              
+		if(GetConVarInt(bot_brag_enabled) == 1)
 		{
 				new victim = GetClientOfUserId(GetEventInt(event, "userid"))
 				new attacker = GetClientOfUserId(GetEventInt(event, "attacker"))
-				if(IsClientInGame(victim) && IsFakeClient(attacker))
+				if(1 <= attacker <= MaxClients && attacker != victim && IsClientInGame(victim) && IsFakeClient(attacker))
 				{
-          BotBragRand(attacker)
+					BotBragRand(attacker)
 				}
 		}
 		return Plugin_Continue
